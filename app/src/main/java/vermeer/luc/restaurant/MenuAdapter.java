@@ -31,8 +31,8 @@ public class MenuAdapter extends ArrayAdapter<MenuItem> {
         ImageView image = view.findViewById(R.id.imageView);
         TextView price = view.findViewById(R.id.price);
         MenuItem item = getItem(position);
-        String priceString = String.valueOf("$ " + item.getPrice());
         name.setText(item.getName());
+        String priceString = "€" + item.getPrice();
         price.setText(priceString);
         Picasso.with(getContext()).load(item.getImageUrl()).into(image);
 
